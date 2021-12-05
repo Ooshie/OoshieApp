@@ -1,12 +1,15 @@
 import React from "react";
-import {View, Text, StyleSheet, Image, Button, TouchableOpacity } from "react-native";
+import {View, Text, StyleSheet, Image, Button, TouchableOpacity, FlatList } from "react-native";
+import Restaurant from "./Restaurant";
 
 const TheDeck = (props) => {
   return (
     <View>
 
-        <Text style={styles.text}>The Deck!</Text>
+        <Text style={styles.text}>Restaurants!</Text>
         
+        <Restaurant name = "Chick-fil-A" link = {require('../../assets/chickfila.png')}
+        />
     </View>
   );
 };
