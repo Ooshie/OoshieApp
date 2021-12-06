@@ -2,27 +2,62 @@ import React from "react";
 import {View, Text, StyleSheet, Image, Button, TouchableOpacity, FlatList } from "react-native";
 import Restaurant from "./Restaurant";
 
-const TheDeck = (props) => {
+const TheDeck = ({navigation}) => {
   return (
-    <View>
+    
+    <View style = {styles.container}>
+    
+    <Image style = {styles.deckImage} source={require('../../assets/thedeck.png')} />
+     
+      <TouchableOpacity style={styles.pick} onPress={function(){navigation.navigate("Chick")}}>
+      <Text style={styles.text}>ChickfilA</Text>
+      <Image style = {styles.logo} source = {require('../../assets/chickfila.png')}/>
+      </TouchableOpacity>
+       
 
-        <Text style={styles.text}>Restaurants!</Text>
-        
-        <Restaurant name = "Chick-fil-A" link = {require('../../assets/chickfila.png')}
-        />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+      alignItems: 'center',
+  },
+  
+  deckImage: {
+      width: 350,
+      height: 200,
+      resizeMode: 'contain',
+      
+  },
+
+  logo: {
+    width: 150,
+    height: 100,
+    resizeMode: 'contain',
+
+  },
+
+  pick: {
+    borderWidth: 4,
+    flexDirection: 'row',
+    padding: 40,
+    justifyContent:'space-between',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    borderBottomRightRadius: 20,
+    borderBottomStartRadius: 20,
+    backgroundColor: "darkgrey"
+  },
+
   text: {
+    lineHeight: 100,
     fontSize: 30,
-    color: "midnightblue",
     textAlign: "center",
     fontWeight: "bold",
     textShadowColor: "blue",
-
   }
+
 });
 
 export default TheDeck;
