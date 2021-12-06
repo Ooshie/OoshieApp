@@ -6,7 +6,9 @@ import SignUpScreen from "./src/screens/SignUpScreen";
 import HomeScreen from "./src/screens/HomeScreen";
 import TheDeck from "./src/screens/TheDeck";
 import TheCove from "./src/screens/TheCove";
-import Restaurant from "./src/screens/Restaurant";
+import ChickfilA from "./src/screens/ChickfilA";
+import Item from "./src/screens/Item";
+import ItemReuslts from "./src/screens/ItemResults";
 
 const navigator = createStackNavigator({
   Home : HomeScreen,
@@ -14,7 +16,9 @@ const navigator = createStackNavigator({
   SignUp : SignUpScreen,
   Deck: TheDeck,
   Cove: TheCove,
-  food: Restaurant,
+  Chick: ChickfilA,
+  Item: Item,
+  ItemReuslts: ItemReuslts,
   
   },
   {
