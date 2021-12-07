@@ -1,6 +1,6 @@
 import React from "react";
 import {View, Text, StyleSheet, Image, Button, TouchableOpacity, FlatList } from "react-native";
-import Restaurant from "./Restaurant";
+// import Restaurant from "./Restaurant";
 
 const TheDeck = ({navigation}) => {
   return (
