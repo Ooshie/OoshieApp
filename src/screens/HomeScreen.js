@@ -5,7 +5,7 @@ const HomeScreen = (props) => {
   return (
     <View style={styles.container}>
 
-        <Image style = {styles.unoImageStyle} source={require('../../assets/uno.png')} />
+        <Image style = {styles.unoImageStyle} source={require('../../assets/UNODiningServices.png')} />
 
         <Text style={styles.text}>Campus Dining!</Text>
         
