@@ -9,6 +9,7 @@ import TheCove from "./src/screens/TheCove";
 import ChickfilA from "./src/screens/ChickfilA";
 import Item from "./src/screens/Item";
 import ItemReuslts from "./src/screens/ItemResults";
+import Moes from "./src/screens/Moes";
 
 const navigator = createStackNavigator({
   Home : HomeScreen,
@@ -19,6 +20,7 @@ const navigator = createStackNavigator({
   Chick: ChickfilA,
   Item: Item,
   ItemReuslts: ItemReuslts,
+  Moe: Moes
   
   },
   {
