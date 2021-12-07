@@ -3,9 +3,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import SigninScreen from "./src/screens/SigninScreen";
 import SignupScreen from "./src/screens/SignupScreen";
-import TrackCreateScreen from "./src/screens/TrackCreateScreen";
-import TrackDetailScreen from "./src/screens/TrackDetailScreen";
-import TrackListScreen from './src/screens/TrackListScreen';
+import CartScreen from "./src/screens/CartScreen";
+import OrderScreen from './src/screens/OrderScreen';
 import AccountScreen from "./src/screens/AccountScreen";
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -16,8 +15,7 @@ import HomeScreen from "./src/screens/HomeScreen";
 import TheDeck from "./src/screens/TheDeck";
 import TheCove from "./src/screens/TheCove";
 import ChickfilA from "./src/screens/ChickfilA";
-import Item from "./src/screens/Item";
-import ItemReuslts from "./src/screens/ItemResults";
+import ItemResults from "./src/screens/ItemResults";
 import Moes from "./src/screens/Moes";
 
 
@@ -26,22 +24,20 @@ const switchNavigator = createSwitchNavigator({
     loginFlow: createStackNavigator({
       Signup: SignupScreen,
       Signin: SigninScreen,
-      Deck: TheDeck,
-      Cove: TheCove,
-      Chick: ChickfilA,
-      Item: Item,
-      ItemReuslts: ItemReuslts,
-      Moe: Moes,
-      Home: HomeScreen
     }),
     mainFlow: createBottomTabNavigator({
-      trackListFlow: createStackNavigator({
-        TrackList: TrackListScreen,
-        TrackDetail: TrackDetailScreen
+      Home: createStackNavigator({
+        Dining: HomeScreen,
+        Deck: TheDeck,
+        Cove: TheCove,
+        ChickfilA: ChickfilA,
+        Moes: Moes,
+        Item: ItemResults,
+        Orders: OrderScreen,
       }),
-      TrackCreate: TrackCreateScreen,
-      Account: AccountScreen
-    })
+      Account: AccountScreen,
+      Cart: CartScreen
+    }),
 });
 
 
