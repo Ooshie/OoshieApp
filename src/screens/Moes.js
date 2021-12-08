@@ -14,35 +14,35 @@ const Mo = ({navigation}) => {
             <Text style={styles.text}></Text>
             <Text style={styles.text}></Text>
         
-            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('ItemReuslts', {otherParam: "Tacos", price: 8.50})}>
+            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('Item', {otherParam: "Tacos", price: 8.50})}>
                 <Item name= "Tacos" link = {require('../../assets/Tacos.png')}
                 price = "8.50"
             />
             </TouchableOpacity>
 
             <Text style={styles.text}></Text>
-            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('ItemReuslts', {otherParam: "Burrito", price: 12.99})}>
+            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('Item', {otherParam: "Burrito", price: 12.99})}>
                 <Item name= "Burrito" link = {require('../../assets/Burrito.png')}
                 price = "12.99"
             />
             </TouchableOpacity>
 
             <Text style={styles.text}></Text>
-            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('ItemReuslts', {otherParam: "Quesadilla", price: 5.75})}>
+            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('Item', {otherParam: "Quesadilla", price: 5.75})}>
                 <Item name= "Quesadilla" link = {require('../../assets/quesadilla.png')}
                 price = "5.75"
             />
             </TouchableOpacity>
 
             <Text style={styles.text}></Text>
-            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('ItemReuslts', {otherParam: "SouthWest Grilled", price: 8.25})}>
+            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('Item', {otherParam: "SouthWest Grilled", price: 8.25})}>
                 <Item name= "SouthWest Grilled" link = {require('../../assets/SouthWestGrill.png')}
                 price = "8.25"
             />
             </TouchableOpacity>
 
             <Text style={styles.text}></Text>
-            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('ItemReuslts', {otherParam: "Nachos", price: 6.25})}>
+            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('Item', {otherParam: "Nachos", price: 6.25})}>
                 <Item name= "Nachos" link = {require('../../assets/Nachos.png')}
                 price = "6.25"
             />
