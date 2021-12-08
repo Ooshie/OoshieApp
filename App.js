@@ -17,6 +17,7 @@ import TheCove from "./src/screens/TheCove";
 import ChickfilA from "./src/screens/ChickfilA";
 import ItemResults from "./src/screens/ItemResults";
 import Moes from "./src/screens/Moes";
+import PaymentScreen from "./src/screens/PaymentScreen";
 
 
 
@@ -34,6 +35,7 @@ const switchNavigator = createSwitchNavigator({
         Moes: Moes,
         Item: ItemResults,
         Orders: OrderScreen,
+        Payment: PaymentScreen
       }),
       Account: AccountScreen,
       Cart: CartScreen
