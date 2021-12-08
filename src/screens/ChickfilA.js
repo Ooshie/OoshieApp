@@ -14,35 +14,35 @@ const ChickfilA = ({navigation}) => {
             <Text style={styles.text}></Text>
             <Text style={styles.text}></Text>
         
-            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('ItemReuslts', {otherParam: "Chick-fil-A® Chicken Sandwich", price: 10.50,},)}>
+            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('Item', {otherParam: "Chick-fil-A® Chicken Sandwich", price: 10.50,},)}>
                 <Item name= "Chick-fil-A® Chicken Sandwich" link = {require('../../assets/sandwich.png')}
                 price = "10.50"
             />
             </TouchableOpacity>
 
             <Text style={styles.text}></Text>
-            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('ItemReuslts', {otherParam: "Chick-fil-A® Deluxe Sandwich", price: 11.0})}>
+            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('Item', {otherParam: "Chick-fil-A® Deluxe Sandwich", price: 11.0})}>
                 <Item name= "Chick-fil-A® Deluxe Sandwich" link = {require('../../assets/delux.png')}
                 price = "11.00"
             />
             </TouchableOpacity>
 
             <Text style={styles.text}></Text>
-            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('ItemReuslts', {otherParam: "Grilled Chicken Sandwich", price: 11.0})}>
+            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('Item', {otherParam: "Grilled Chicken Sandwich", price: 11.0})}>
                 <Item name= "Grilled Chicken Sandwich" link = {require('../../assets/grilled.png')}
                 price = "11.00"
             />
             </TouchableOpacity>
 
             <Text style={styles.text}></Text>
-            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('ItemReuslts', {otherParam: "Chick-fil-A® Nuggets", price: 8.25})}>
+            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('Item', {otherParam: "Chick-fil-A® Nuggets", price: 8.25})}>
                 <Item name= "Chick-fil-A® Nuggets" link = {require('../../assets/nuggets.png')}
                 price = "8.25"
             />
             </TouchableOpacity>
 
             <Text style={styles.text}></Text>
-            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('ItemReuslts', {otherParam: "Grilled Nuggets", price: 8.25})}>
+            <TouchableOpacity style={styles.item} onPress={() =>navigation.navigate('Item', {otherParam: "Grilled Nuggets", price: 8.25})}>
                 <Item name= "Grilled Nuggets" link = {require('../../assets/grillednuggets.png')}
                 price = "8.25"
             />
