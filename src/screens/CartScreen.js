@@ -92,12 +92,12 @@ const CartScreen = ({navigation}) => {
             </View>
             
             <View style={{alignItems:'center', paddingBottom: 70}}>
-              <TouchableOpacity onPress={function(){navigation.navigate('Pay')}}>
+              <TouchableOpacity onPress={function(){navigation.navigate('Payment')}}>
                 <Image style={{width: 250, height: 100}}source={require('../../assets/Pay.png')}/>
               </TouchableOpacity>
             </View>
         </View>
-
+        {/*
         <View style={{flexDirection: 'row', justifyContent:'space-evenly'}}>
           <TouchableOpacity>
            <Text style={styles.receiptText}> Home </Text>
@@ -110,7 +110,7 @@ const CartScreen = ({navigation}) => {
           <TouchableOpacity>
             <Text style={styles.receiptText}> Account </Text>
           </TouchableOpacity>
-        </View>
+        </View>*/}
       </View>
       break;
     case PICKUP:
@@ -145,12 +145,12 @@ const CartScreen = ({navigation}) => {
             </View>
             
             <View style={{alignItems:'center', paddingBottom: 100}}>
-              <TouchableOpacity onPress={function(){navigation.navigate('Pay')}}>
+              <TouchableOpacity onPress={function(){navigation.navigate('Payment')}}>
                 <Image style={{width: 250, height: 100}}source={require('../../assets/Pay.png')}/>
               </TouchableOpacity>
             </View>
         </View>
-
+        {/*
         <View style={{flexDirection: 'row', justifyContent:'space-evenly'}}>
           <TouchableOpacity>
            <Text style={styles.receiptText}> Home </Text>
@@ -163,7 +163,7 @@ const CartScreen = ({navigation}) => {
           <TouchableOpacity>
             <Text style={styles.receiptText}> Account </Text>
           </TouchableOpacity>
-        </View>
+        </View>*/}
       </View>
       break;
   }
