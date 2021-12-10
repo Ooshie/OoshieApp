@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {View, Image, Text, StyleSheet, TextInput, Picker, Button, TouchableOpacity} from 'react-native'
 
-const ItemReuslts= ({navigation}) =>{
+const ItemResults= ({navigation}) =>{
     const [selectedValue, setSelectedValue] = useState("meal");
     
     const [quantity, setQuantity] = useState(1);
@@ -88,4 +88,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default ItemReuslts
+export default ItemResults
