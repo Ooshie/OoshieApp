@@ -16,6 +16,9 @@ const ItemResults= ({navigation}) =>{
         else
         return 0
       };
+    
+    const priceVal = navigation.getParam('price', 'NO-ID');
+    const itemName = navigation.getParam('otherParam', 'default value')
 
     return(
         <View style={styles.container}>
@@ -42,7 +45,10 @@ const ItemResults= ({navigation}) =>{
                 <Button title = "Decrease" onPress={function() {setQuantity(quantity - checkDecrease())}}/>
             </View>
             <Text style={styles.space2}> </Text>
-            <Button title = "Add To Cart"/>
+            <Button
+            title = "Add To Cart"
+            onPress = {() =>navigation.navigate('Cart', {otherParam: itemName, price: priceVal, quantity: quantity})}
+            />
         </View>
     )
 }
