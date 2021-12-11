@@ -4,7 +4,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import SigninScreen from "./src/screens/SigninScreen";
 import SignupScreen from "./src/screens/SignupScreen";
 import CartScreen from "./src/screens/CartScreen";
-import OrderScreen from './src/screens/OrderScreen';
 import AccountScreen from "./src/screens/AccountScreen";
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -34,7 +33,6 @@ const switchNavigator = createSwitchNavigator({
         ChickfilA: ChickfilA,
         Moes: Moes,
         Item: ItemResults,
-        Orders: OrderScreen,
         Payment: PaymentScreen
       }),
       Account: AccountScreen,
