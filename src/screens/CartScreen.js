@@ -1,6 +1,6 @@
 // Necessary Imports
 import React, {useState} from "react";
-import { Text, StyleSheet, View, TouchableOpacity, Image } from "react-native";
+import { Text, StyleSheet, View, TouchableOpacity, Image, TextInput} from "react-native";
 
 // States
 const START = 'options';
@@ -8,24 +8,26 @@ const DELIVERY = 'delivery';
 const PICKUP = 'pickup';
 
 // Variables for general cases so it could be modified
-var Item, Count, Price, Subtotal, Tax, DeliveryFee, Total, Where, Time
-
-// Dummy data used instead of list
-Item = 'Chicken Sandwich'
-Price = 10.15
-Count = 1
-Where = 'New Orleans'
-Subtotal = Price * Count
-Tax = parseFloat((.0945 * Subtotal).toFixed(2))
-// Whatever you want I just put this here for dummy data
-DeliveryFee = 10.00 
-// Could be anything
-Time = '5 - 10 minutes' 
-Total = (Subtotal + Tax + DeliveryFee)
-
+var Item, Count, Price, SubtotalTemp, Subtotal, Tax, DeliveryFee, TotalTemp, Total, Building, Room, Time
 
 const CartScreen = ({navigation}) => {
-  
+
+  // Dummy data used instead of list
+  Item = navigation.getParam('otherParam')
+  Price = navigation.getParam('price');
+  Count = navigation.getParam('quantity')
+  Building = <View><TextInput style = {styles.input} maxLength={16}/></View>
+  Room = <View><TextInput style = {styles.input2} maxLength={16}/></View>
+  Subtotal = (Price * Count).toFixed(2)
+  SubtotalTemp = (Price * Count)
+  Tax = parseFloat((.0945 * Subtotal).toFixed(2))
+  // Whatever you want I just put this here for dummy data
+  DeliveryFee = 5.00 
+  // Could be anything
+  Time = '5 - 10 minutes' 
+  TotalTemp = (SubtotalTemp + Tax + DeliveryFee)
+  Total = Math.round((TotalTemp + Number.EPSILON) * 100) / 100
+
   const [optionState, setOptionState] = useState(START);
   var display;
 
@@ -34,9 +36,6 @@ const CartScreen = ({navigation}) => {
     case START:
       display=
       <View style={{backgroundColor: 'white', flex: 1}}>
-        <TouchableOpacity>
-          <Text style={styles.backText}> Back </Text>
-        </TouchableOpacity>
         <View style={{alignItems: 'center'}}>
           <Text style={styles.headerText}> Cart {'\n'} How do you want to receive your food?</Text>
         </View>
@@ -72,22 +71,24 @@ const CartScreen = ({navigation}) => {
               <Text style={styles.receiptText}> 
                   Item: {'\n'}
                   Count: {'\n'}
-                  Location: {'\n'}
                   Subtotal: {'\n'}
                   Tax (9.45%):  {'\n'}
                   Delivery Fee: {'\n'}
                   Total: {'\n'}
-                  Est. Delivery Time:
+                  Est. Delivery Time: {'\n'} {'\n'}
+                  Building: {'\n'} {'\n'} {'\n'}
+                  Room #: {'\n'}
               </Text>
               <Text style={styles.receiptText}>
                   {Item} {'\n'}
                   {Count} {'\n'}
-                  {Where} {'\n'}
                   ${Subtotal} {'\n'}
                   ${Tax} {'\n'}
                   ${DeliveryFee} {'\n'}
                   ${Total} {'\n'}
-                  {Time}
+                  {Time} {'\n'} {'\n'}
+                  {Building} {'\n'}
+                  {Room} {'\n'}
               </Text>
             </View>
             
@@ -127,7 +128,6 @@ const CartScreen = ({navigation}) => {
               <Text style={styles.receiptText}> 
                   Item: {'\n'}
                   Count: {'\n'}
-                  Location: {'\n'}
                   Subtotal: {'\n'}
                   Tax (9.45%):  {'\n'}
                   Total: {'\n'}
@@ -136,7 +136,6 @@ const CartScreen = ({navigation}) => {
               <Text style={styles.receiptText}>
                   {Item} {'\n'}
                   {Count} {'\n'}
-                  {Where} {'\n'}
                   ${Subtotal} {'\n'}
                   ${Tax} {'\n'}
                   ${(Total - DeliveryFee)} {'\n'}
@@ -176,7 +175,9 @@ const styles = StyleSheet.create({
   backText:
   {
     fontSize: 20, 
-    fontFamily: 'Futura'
+    fontFamily: 'Futura',
+    marginLeft: 10,
+    marginTop: 40
   },
   text: {
     fontSize: 30,
@@ -190,7 +191,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: 'Cochin-Bold',
     fontSize: 30,
-    paddingBottom: 3
+    paddingBottom: 3,
+    marginTop: 50
   },
   option:
   {
@@ -207,7 +209,26 @@ const styles = StyleSheet.create({
   {
     fontSize: 20,
     fontFamily: 'Bodoni 72'
-  }
+  },
+  input:
+    {
+        textAlign: 'center',
+        fontSize: 15, 
+        padding: 10,  
+        margin: 0,
+        height: 40,
+        borderWidth: 1,  
+    },
+    input2:
+    {
+        textAlign: 'center',
+        fontSize: 15, 
+        padding: 10,  
+        margin: 1,
+        height: 40,
+        borderWidth: 1,  
+    },
+
 });
 
 export default CartScreen;
